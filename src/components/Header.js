@@ -1,5 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
+import { ReactComponent as GmailIcon } from "../icons/gmail.svg";
+import { ReactComponent as LinkedInIcon } from "../icons/linkedin.svg";
+import { ReactComponent as StackOverflowIcon } from "../icons/stack-overflow.svg";
+import { ReactComponent as GitHubIcon } from "../icons/github.svg";
 
 const HeaderWrapper = styled.div`
 	position: relative;
@@ -51,8 +55,17 @@ const About = styled.div`
 	}
 `;
 
-export const Header = () => {
-	const ProfilePhoto = "images/profile-photo.jpg"
+const SocialMedia = styled.div`
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	& > a {
+		padding: 0 5px;
+	}
+`;
+
+const Header = () => {
+	const ProfilePhoto = "images/profile-photo.jpg";
 	return (
 		<HeaderWrapper id="about">
 			<NavBar id="nav-wrap">
@@ -72,11 +85,16 @@ export const Header = () => {
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 					</p>
-					<ul>Here goes the list of social links</ul>
+					<SocialMedia>
+						<a href="https://www.linkedin.com/in/mar%C3%ADa-eugenia-tirado-p%C3%A9rez-767657162/?locale=en_US"><LinkedInIcon /></a>
+						<a href="https://github.com/mariatiperez"><GitHubIcon /></a>
+						<a href="https://stackoverflow.com/users/13274127/maria-tirado?tab=profile"><StackOverflowIcon /></a>
+						<a href="mailto:mariatiperez@gmail.com"><GmailIcon /></a>
+					</SocialMedia>
 				</div>
 			</About>
 		</HeaderWrapper>
 	);
-}
+};
 
 export default Header;
