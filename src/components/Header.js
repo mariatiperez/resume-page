@@ -7,7 +7,7 @@ import { ReactComponent as GitHubIcon } from "../icons/github.svg";
 
 const HeaderWrapper = styled.div`
 	position: relative;
-	height: 500px;
+	height: 350px;
 	width: 100%;
 	text-align: center;
 	overflow: hidden;
@@ -17,6 +17,7 @@ const HeaderWrapper = styled.div`
 const NavBar = styled.nav`
 	width: 100%;
 	font-weight: bold;
+	position: fixed;
 	& > ul {
 		min-height: 48px;
 		width: auto;
@@ -49,7 +50,9 @@ const About = styled.div`
 	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: center;
-	padding: 25px 0;
+	padding: 50px 0 0;
+	max-width: 1200px;
+	margin: auto;
 	& > div {
 		width: 50%;
 	}
@@ -72,8 +75,7 @@ const Header = () => {
 				<ul id="nav" className="nav">
 					<li className="current"><a className="smoothscroll" href="#about">About</a></li>
 					<li><a className="smoothscroll" href="#resume">Resume</a></li>
-					<li><a className="smoothscroll" href="#portfolio">Works</a></li>
-					<li><a className="smoothscroll" href="#testimonials">Testimonials</a></li>
+					<li><a className="smoothscroll" href="#portfolio">Portfolio</a></li>
 					<li><a className="smoothscroll" href="#contact">Contact</a></li>
 				</ul>
 			</NavBar>
@@ -82,8 +84,8 @@ const Header = () => {
 				<div>
 					<h1>Maria Tirado</h1>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						I’m a frontend developer in continous improvement with
+						passion about learning new things!
 					</p>
 					<SocialMedia>
 						<a href="https://www.linkedin.com/in/mar%C3%ADa-eugenia-tirado-p%C3%A9rez-767657162/?locale=en_US"><LinkedInIcon /></a>
