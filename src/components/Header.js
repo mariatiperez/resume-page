@@ -5,16 +5,19 @@ import { ReactComponent as LinkedInIcon } from "../icons/linkedin.svg";
 import { ReactComponent as StackOverflowIcon } from "../icons/stack-overflow.svg";
 import { ReactComponent as GitHubIcon } from "../icons/github.svg";
 
-const HeaderWrapper = styled.div`
+const HeaderWrapper = styled.section`
 	position: relative;
 	height: 350px;
 	width: 100%;
 	text-align: center;
 	overflow: hidden;
 	background: white;
-`;
+	display: flex;
+	vertical-align: middle;
+	`;
 
 const NavBar = styled.nav`
+	background: white;
 	width: 100%;
 	font-weight: bold;
 	position: fixed;
@@ -46,13 +49,13 @@ const Photo = styled.img`
 `;
 
 const About = styled.div`
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-	align-items: center;
-	padding: 50px 0 0;
-	max-width: 1200px;
-	margin: auto;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+align-items: center;
+max-width: 1020px;
+padding: 50px 0 0;
+margin: auto;
 	& > div {
 		width: 50%;
 	}
@@ -73,10 +76,10 @@ const Header = () => {
 		<HeaderWrapper id="about">
 			<NavBar id="nav-wrap">
 				<ul id="nav" className="nav">
-					<li className="current"><a className="smoothscroll" href="#about">About</a></li>
-					<li><a className="smoothscroll" href="#resume">Resume</a></li>
-					<li><a className="smoothscroll" href="#portfolio">Portfolio</a></li>
-					<li><a className="smoothscroll" href="#contact">Contact</a></li>
+					<li className="current"><a href="#about">About</a></li>
+					<li><a href="#resume">Resume</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</NavBar>
 			<About>
