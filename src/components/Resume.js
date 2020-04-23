@@ -1,14 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-// import { ReactComponent as EducationIcon } from "../icons/education.png";
 
 const ResumeWrapper = styled.section``;
 
 const ResumeSection = styled.div`
   display: grid;
   grid-template-columns: 1fr 3fr;
-  max-width: 1200px;
-  margin: auto;
+  width: 95%;
+  max-width: 1020px;
+  margin: auto;  
+  padding: 5% 0;  
+  border-bottom: 1px solid #E8E8E8;
 `;
 
 const SectionTitle = styled.div`
@@ -27,7 +29,7 @@ const SectionTitle = styled.div`
   `;
 
 const SectionBody = styled.div`
-  margin: 0 20px;
+  margin-right: 20px;
   text-align: left;
 `;
 
@@ -55,11 +57,10 @@ const Resume = () => {
         <SectionBody>
           <h1>Junior Frontend Developer</h1>
           <i>Telesero ∙ Octubre 2019 - Marzo 2020</i>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
+          <p>In this job I was in a Frontend Team in constantly communication with the Backend Team. I built products using ReactJS, RXJS and Redux. I had to design and develop styled components for some applications that I started from scratch, also I made some refactor to their previous apps.</p>
           <h1>Technology and Information Analyst</h1>
           <i>Universidad Católica Andres Bello (UCAB) ∙ Noviembre 2018 - Septiembre 2019</i>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <p>In this job I worked for a technology coordination of the university. I made documentation of their previous applications, and made an application from scratch using Angular. Also, I collaborate at backend group with the desing and develop of the database and API using mySQL, typeORM, ExpressJS and nodeJS.</p>
         </SectionBody>
       </ResumeSection>
       {/* <Education> 
