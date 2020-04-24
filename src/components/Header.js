@@ -5,7 +5,7 @@ import { ReactComponent as LinkedInIcon } from "../icons/linkedin.svg";
 import { ReactComponent as StackOverflowIcon } from "../icons/stack-overflow.svg";
 import { ReactComponent as GitHubIcon } from "../icons/github.svg";
 
-const HeaderWrapper = styled.section`
+const HeaderWrapper = styled.div`
 	position: relative;
 	height: 350px;
 	width: 100%;
@@ -28,6 +28,9 @@ const NavBar = styled.nav`
 		margin: 0;
 		& > li {
 			display: inline-block;
+				&.current > a {
+					color: #CE4257;
+				}
 			& > a {
 				display: inline-block;
 				padding: 8px 13px;
@@ -35,9 +38,6 @@ const NavBar = styled.nav`
 				text-decoration: none;
 				color: #223843;
 				text-transform: capitalize;
-				&.current {
-					color: #CE4257;
-				}
 			}
 		}
 	}
@@ -80,12 +80,13 @@ const Header = () => {
 			<NavBar id="nav-wrap">
 				<ul id="nav" className="nav">
 					{sections.map((section, index) => (
-						<li key={section}><a
-							href={"#" + section}
-							onClick={() => setChosenSection(index)}
-							className={chosenSection === index ? "current" : ""}>
-							{section}
-						</a></li>))
+						<li key={section}
+							className={chosenSection === index ? "current" : ""}><a
+								href={"#" + section}
+								onClick={() => setChosenSection(index)}
+								className="smoothscroll">
+								{section}
+							</a></li>))
 					}
 				</ul>
 			</NavBar>
