@@ -24,15 +24,22 @@ const ProjectsPreview = styled.div`
 
 const Portfolio = () => {
   const projects = [[
-    "images/coleados/coleados.png",
-    "images/coleados/coleados2.png"
+    "images/coleados/1.png",
+    "images/coleados/2.png",
+    "images/coleados/3.png",
+    "images/coleados/4.png",
+    "images/coleados/5.png",
+    "images/coleados/6.png"
   ], [
-    "images/sgr/sgr1.png",
-    "images/sgr/sgr2.png"
+    "images/sgr/1.png",
+    "images/sgr/2.png",
+    "images/sgr/3.png",
+    "images/sgr/4.png",
+    "images/sgr/5.png"
   ]];
   const [chosenProject, setChosenProject] = useState(0);
   return (
-    <PortfolioWrapper>
+    <PortfolioWrapper id="portfolio">
       <ProjectsPreview>
         {projects.map((urls, index) =>
           <img
