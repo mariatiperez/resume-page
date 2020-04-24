@@ -35,7 +35,6 @@ const Slideshow = ({ slideImages }) => {
               key={"slider/" + url}
               style={{
                 width: "100%",
-                padding: "15px 0",
                 margin: "auto"
               }} />
           </div>
