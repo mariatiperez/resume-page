@@ -22,14 +22,23 @@ const Slideshow = ({ slideImages }) => {
     <SlideContainer>
       <Slide {...properties}>
         {slideImages.map(url => (
-          <img
-            src={url}
-            alt="slide"
+          <div
             key={"slider/" + url}
             style={{
-              width: "100%",
-              padding: "15px 0"
-            }} />
+              height: "100%",
+              display: "flex",
+              verticalAlign: "middle"
+            }}>
+            <img
+              src={url}
+              alt="slide"
+              key={"slider/" + url}
+              style={{
+                width: "100%",
+                padding: "15px 0",
+                margin: "auto"
+              }} />
+          </div>
         ))}
       </Slide>
     </SlideContainer>

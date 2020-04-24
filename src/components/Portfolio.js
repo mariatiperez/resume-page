@@ -31,12 +31,20 @@ const Portfolio = () => {
     "images/coleados/5.png",
     "images/coleados/6.png"
   ], [
+    "images/service/1.png",
+    "images/service/2.png",
+    "images/service/3.png"
+  ], [
     "images/sgr/1.png",
     "images/sgr/2.png",
     "images/sgr/3.png",
     "images/sgr/4.png",
     "images/sgr/5.png"
-  ]];
+  ], [
+    "images/library/1.png",
+    "images/library/2.png"
+  ]
+  ];
   const [chosenProject, setChosenProject] = useState(0);
   return (
     <PortfolioWrapper id="portfolio">
