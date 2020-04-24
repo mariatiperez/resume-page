@@ -56,10 +56,10 @@ const Resume = () => {
         </SectionTitle>
         <SectionBody>
           <h1>Junior Frontend Developer</h1>
-          <i>Telesero ∙ Octubre 2019 - Marzo 2020</i>
+          <i>Telesero ∙ October 2019 - March 2020</i>
           <p>In this job I was in a Frontend Team in constantly communication with the Backend Team. I built products using ReactJS, RXJS and Redux. I had to design and develop styled components for some applications that I started from scratch, also I made some refactor to their previous apps.</p>
           <h1>Technology and Information Analyst</h1>
-          <i>Universidad Católica Andres Bello (UCAB) ∙ Noviembre 2018 - Septiembre 2019</i>
+          <i>Universidad Católica Andres Bello (UCAB) ∙ November 2018 - September 2019</i>
           <p>In this job I worked for a technology coordination of the university. I made documentation of their previous applications, and made an application from scratch using Angular. Also, I collaborate at backend group with the desing and develop of the database and API using mySQL, typeORM, ExpressJS and nodeJS.</p>
         </SectionBody>
       </ResumeSection>
