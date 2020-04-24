@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { ReactComponent as GmailIcon } from "../icons/gmail.svg";
 import { ReactComponent as LinkedInIcon } from "../icons/linkedin.svg";
@@ -28,15 +28,16 @@ const NavBar = styled.nav`
 		margin: 0;
 		& > li {
 			display: inline-block;
-			&.current > a {
-				color: #CE4257;
-			}
 			& > a {
 				display: inline-block;
 				padding: 8px 13px;
 				line-height: 32px;
 				text-decoration: none;
 				color: #223843;
+				text-transform: capitalize;
+				&.current {
+					color: #CE4257;
+				}
 			}
 		}
 	}
@@ -72,14 +73,20 @@ const SocialMedia = styled.div`
 
 const Header = () => {
 	const ProfilePhoto = "images/profile-photo.jpg";
+	const [chosenSection, setChosenSection] = useState(0);
+	const sections = ["about", "resume", "portfolio"];
 	return (
 		<HeaderWrapper id="about">
 			<NavBar id="nav-wrap">
 				<ul id="nav" className="nav">
-					<li className="current"><a href="#about">About</a></li>
-					<li><a href="#resume">Resume</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#contact">Contact</a></li>
+					{sections.map((section, index) => (
+						<li key={section}><a
+							href={"#" + section}
+							onClick={() => setChosenSection(index)}
+							className={chosenSection === index ? "current" : ""}>
+							{section}
+						</a></li>))
+					}
 				</ul>
 			</NavBar>
 			<About>

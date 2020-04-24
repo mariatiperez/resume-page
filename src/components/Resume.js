@@ -63,11 +63,6 @@ const Resume = () => {
           <p>In this job I worked for a technology coordination of the university. I made documentation of their previous applications, and made an application from scratch using Angular. Also, I collaborate at backend group with the desing and develop of the database and API using mySQL, typeORM, ExpressJS and nodeJS.</p>
         </SectionBody>
       </ResumeSection>
-      {/* <Education> 
-    <Experience></Experience>
-    <Skills></Skills>
-    <Languages></Languages>
-    <Hobbies></Hobbies> */}
     </ResumeWrapper>);
 };
 
