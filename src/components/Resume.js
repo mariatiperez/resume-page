@@ -55,9 +55,22 @@ const Resume = () => {
           <h2>Education</h2>
         </SectionTitle>
         <SectionBody>
-          <h1>Bachelor in Computer Science Engineering</h1>
+          <h3>Bachelor in Computer Science Engineering</h3>
           <i>Universidad Católica Andres Bello (UCAB) - Venezuela ∙ Septiembre 2015 - Octubre 2020</i>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <p>
+            During my studies I had the opportunity to live different points of view,
+            which gave me very good experiences. All my life I have been a student of
+            good grades, which was not lacking in college! I received recognition
+            for belonging to the top 10 students with the best grades.
+          </p><p>
+            From my second year of studies
+            I started working at the university to help pay for my studies and
+            I was a student tutor for more than two years.
+          </p><p>
+            I actively participated in the activities organized by the management
+            of my school and my colleagues elected me as representative of the students
+            before the school council during 2018 - 2019 period.
+          </p>
         </SectionBody>
       </ResumeSection>
       <ResumeSection>
@@ -66,10 +79,10 @@ const Resume = () => {
           <h2>Experience</h2>
         </SectionTitle>
         <SectionBody>
-          <h1>Junior Frontend Developer</h1>
+          <h3>Junior Frontend Developer</h3>
           <i>Telesero ∙ October 2019 - March 2020</i>
           <p>In this job I was in a Frontend Team in constantly communication with the Backend Team. I built products using ReactJS, RXJS and Redux. I had to design and develop styled components for some applications that I started from scratch, also I made some refactor to their previous apps.</p>
-          <h1>Technology and Information Analyst</h1>
+          <h3>Technology and Information Analyst</h3>
           <i>Universidad Católica Andres Bello (UCAB) ∙ November 2018 - September 2019</i>
           <p>In this job I worked for a technology coordination of the university. I made documentation of their previous applications, and made an application from scratch using Angular. Also, I collaborate at backend group with the desing and develop of the database and API using mySQL, typeORM, ExpressJS and nodeJS.</p>
         </SectionBody>
