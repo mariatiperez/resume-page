@@ -8,7 +8,7 @@ import { ReactComponent as MenuIcon } from "../icons/menu.svg";
 
 const HeaderWrapper = styled.div`
 	position: relative;
-	height: 350px;
+	/* height: 350px; */
 	width: 100%;
 	text-align: center;
 	overflow: hidden;
@@ -80,14 +80,6 @@ const NavBar = styled.nav`
 	}
 `;
 
-const Photo = styled.img`
-	width: 50%;
-	height: 50%;
-	max-width: 200px;
-	max-height: 200px;
-	border-radius: 100%;
-`;
-
 const About = styled.div`
 	display: flex;
 	flex-direction: row;
@@ -98,6 +90,24 @@ const About = styled.div`
 	margin: auto;
 	& > div {
 		width: 50%;
+	}
+	& > img {
+		width: 50%;
+		height: 50%;
+		max-width: 200px;
+		max-height: 200px;
+		border-radius: 100%;
+	}
+	
+	@media only screen and (max-width: 700px) {
+		flex-direction: column;
+		& > img {
+			max-width: 150px;
+			max-height: 150px;
+		}
+		& > div {
+			width: 90%;
+		}
 	}
 `;
 
@@ -144,7 +154,7 @@ const Header = () => {
 				}
 			</NavBar>
 			<About>
-				<Photo src={ProfilePhoto} alt="Maria Tirado Photo" />
+				<img src={ProfilePhoto} alt="Maria Tirado Photo" />
 				<div>
 					<h1>Maria Tirado</h1>
 					<p>
