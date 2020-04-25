@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-const ResumeWrapper = styled.section``;
-
 const ResumeSection = styled.div`
   display: grid;
   grid-template-columns: 1fr 3fr;
@@ -11,6 +9,11 @@ const ResumeSection = styled.div`
   margin: auto;  
   padding: 5% 0;  
   border-bottom: 1px solid #E8E8E8;
+  
+	@media only screen and (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const SectionTitle = styled.div`
@@ -26,18 +29,26 @@ const SectionTitle = styled.div`
     width: 96px;
     margin: 1em auto 0 auto;
   }
-  `;
+`;
 
 const SectionBody = styled.div`
   margin-right: 20px;
   text-align: left;
+  
+	@media only screen and (max-width: 700px) {
+    text-align: center;
+    margin: 0 20px;
+    & > p {
+      text-align: left;
+    }
+  }
 `;
 
 const Resume = () => {
   const EducationIcon = "images/education.png";
   const JobIcon = "images/job.png";
   return (
-    <ResumeWrapper id="resume">
+    <section id="resume">
       <ResumeSection>
         <SectionTitle>
           <img src={EducationIcon} />
@@ -63,7 +74,7 @@ const Resume = () => {
           <p>In this job I worked for a technology coordination of the university. I made documentation of their previous applications, and made an application from scratch using Angular. Also, I collaborate at backend group with the desing and develop of the database and API using mySQL, typeORM, ExpressJS and nodeJS.</p>
         </SectionBody>
       </ResumeSection>
-    </ResumeWrapper>);
+    </section>);
 };
 
 export default Resume;
