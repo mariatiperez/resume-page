@@ -73,6 +73,7 @@ const NavBar = styled.nav`
 				border-bottom: 0.5px solid #E8E8E8;
 				& > a {
 					color: white;
+					width: 70%;
 				}
 			}
 
