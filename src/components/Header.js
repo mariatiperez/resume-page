@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { ReactComponent as GmailIcon } from "../icons/gmail.svg";
 import { ReactComponent as LinkedInIcon } from "../icons/linkedin.svg";
 import { ReactComponent as StackOverflowIcon } from "../icons/stack-overflow.svg";
 import { ReactComponent as GitHubIcon } from "../icons/github.svg";
+import { ReactComponent as MenuIcon } from "../icons/menu.svg";
 
 const HeaderWrapper = styled.div`
 	position: relative;
@@ -14,7 +15,7 @@ const HeaderWrapper = styled.div`
 	background: white;
 	display: flex;
 	vertical-align: middle;
-	`;
+`;
 
 const NavBar = styled.nav`
 	background: white;
@@ -41,22 +42,60 @@ const NavBar = styled.nav`
 			}
 		}
 	}
+	& > button {
+		display: none;
+	}
+
+	@media only screen and (max-width: 700px) {
+		background: transparent;
+		& > button {
+			display: block;
+		position: relative;
+			width: 48px;
+			height: 48px;
+      border: none;
+      float: right;
+      right: 30px;
+			background: #223843;
+			& > svg {
+				width: 30px;
+				height: 30px;
+				fill: white;
+			}
+		}
+
+		& > ul {
+      float: right;
+			background: #223843;
+			margin: 48px -18px 0 0;
+			& > li {
+				width: 70%;
+				border-bottom: 0.5px solid #E8E8E8;
+				& > a {
+					color: white;
+				}
+			}
+
+		}
+	}
 `;
 
 const Photo = styled.img`
-	width: 200px;
-	height: 200px;
+	width: 50%;
+	height: 50%;
+	max-width: 200px;
+	max-height: 200px;
 	border-radius: 100%;
 `;
 
 const About = styled.div`
-display: flex;
-flex-direction: row;
-justify-content: space-evenly;
-align-items: center;
-max-width: 1020px;
-padding: 50px 0 0;
-margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	max-width: 1020px;
+	padding: 50px 0 0;
+	margin: auto;
 	& > div {
 		width: 50%;
 	}
@@ -73,22 +112,36 @@ const SocialMedia = styled.div`
 
 const Header = () => {
 	const ProfilePhoto = "images/profile-photo.jpg";
-	const [chosenSection, setChosenSection] = useState(0);
 	const sections = ["about", "resume", "portfolio"];
+	const [chosenSection, setChosenSection] = useState(-1);
+	const [showMenu, setShowMenu] = useState(window.screen.width > 700 ? true : false);
+
+	useEffect(() =>
+		function handleResize() {
+			if (window.screen.width > 700) {
+				setShowMenu(true);
+			}
+			window.addEventListener('resize', handleResize)
+		}
+	);
+
 	return (
 		<HeaderWrapper id="about">
 			<NavBar id="nav-wrap">
-				<ul id="nav" className="nav">
-					{sections.map((section, index) => (
-						<li key={section}
-							className={chosenSection === index ? "current" : ""}><a
-								href={"#" + section}
-								onClick={() => setChosenSection(index)}
-								className="smoothscroll">
-								{section}
-							</a></li>))
-					}
-				</ul>
+				<button onClick={() => setShowMenu(!showMenu)}><MenuIcon /></button>
+				{showMenu &&
+					<ul id="nav" className="nav">
+						{sections.map((section, index) => (
+							<li key={section}
+								className={chosenSection === index ? "current" : ""}><a
+									href={"#" + section}
+									onClick={() => setChosenSection(index)}
+									className="smoothscroll">
+									{section}
+								</a>
+							</li>))}
+					</ul>
+				}
 			</NavBar>
 			<About>
 				<Photo src={ProfilePhoto} alt="Maria Tirado Photo" />
