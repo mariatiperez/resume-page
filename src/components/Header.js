@@ -122,7 +122,7 @@ const SocialMedia = styled.div`
 `;
 
 const Header = () => {
-	const ProfilePhoto = "images/profile-photo.jpg";
+	const ProfilePhoto = "/resume-page/images/profile-photo.jpg";
 	const sections = ["about", "resume", "portfolio"];
 	const [chosenSection, setChosenSection] = useState(-1);
 	const [showMenu, setShowMenu] = useState(window.screen.width > 700 ? true : false);

@@ -30,28 +30,28 @@ const ProjectsPreview = styled.div`
 
 const Portfolio = () => {
   const projects = [[
-    "images/coleados/0.png",
-    "images/coleados/1.png",
-    "images/coleados/2.png",
-    "images/coleados/3.png",
-    "images/coleados/4.png",
-    "images/coleados/5.png",
-    "images/coleados/6.png"
+    "/resume-page/images/coleados/0.png",
+    "/resume-page/images/coleados/1.png",
+    "/resume-page/images/coleados/2.png",
+    "/resume-page/images/coleados/3.png",
+    "/resume-page/images/coleados/4.png",
+    "/resume-page/images/coleados/5.png",
+    "/resume-page/images/coleados/6.png"
   ], [
-    "images/service/0.png",
-    "images/service/1.png",
-    "images/service/2.png",
-    "images/service/3.png"
+    "/resume-page/images/service/0.png",
+    "/resume-page/images/service/1.png",
+    "/resume-page/images/service/2.png",
+    "/resume-page/images/service/3.png"
   ], [
-    "images/sgr/0.png",
-    "images/sgr/1.png",
-    "images/sgr/3.png",
-    "images/sgr/4.png",
-    "images/sgr/5.png"
+    "/resume-page/images/sgr/0.png",
+    "/resume-page/images/sgr/1.png",
+    "/resume-page/images/sgr/3.png",
+    "/resume-page/images/sgr/4.png",
+    "/resume-page/images/sgr/5.png"
     // ], [
-    //   "images/library/0.png",
-    //   "images/library/1.png",
-    //   "images/library/2.png"
+    //   "/resume-page/images/library/0.png",
+    //   "/resume-page/images/library/1.png",
+    //   "/resume-page/images/library/2.png"
   ]
   ];
   const [chosenProject, setChosenProject] = useState(0);

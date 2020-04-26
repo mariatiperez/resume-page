@@ -48,8 +48,8 @@ const SectionBody = styled.div`
 `;
 
 const Resume = () => {
-  const EducationIcon = "images/education.png";
-  const JobIcon = "images/job.png";
+  const EducationIcon = "/resume-page/images/education.png";
+  const JobIcon = "/resume-page/images/job.png";
   return (
     <section id="resume">
       <ResumeSection>
