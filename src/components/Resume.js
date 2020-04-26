@@ -19,7 +19,7 @@ const ResumeSection = styled.div`
 const SectionTitle = styled.div`
   display: flex;
   flex-direction: column;
-  & > h2 {
+  & > h1 {
     margin: 0 auto auto;
     border-bottom: 3px solid #ce4257;
     width: 120px;
@@ -38,6 +38,9 @@ const SectionBody = styled.div`
 	@media only screen and (max-width: 700px) {
     text-align: center;
     margin: 0 20px;
+    & > h2 {
+      font-size: 1.17em;
+    }
     & > p {
       text-align: left;
     }
@@ -52,10 +55,10 @@ const Resume = () => {
       <ResumeSection>
         <SectionTitle>
           <img src={EducationIcon} />
-          <h2>Education</h2>
+          <h1>Education</h1>
         </SectionTitle>
         <SectionBody>
-          <h3>Bachelor in Computer Science Engineering</h3>
+          <h2>Bachelor in Computer Science Engineering</h2>
           <i>Universidad Católica Andres Bello (UCAB) - Venezuela ∙ Septiembre 2015 - Octubre 2020</i>
           <p>
             During my studies I had the opportunity to live different points of view,
@@ -76,13 +79,13 @@ const Resume = () => {
       <ResumeSection>
         <SectionTitle>
           <img src={JobIcon} />
-          <h2>Experience</h2>
+          <h1>Experience</h1>
         </SectionTitle>
         <SectionBody>
-          <h3>Junior Frontend Developer</h3>
+          <h2>Junior Frontend Developer</h2>
           <i>Telesero ∙ October 2019 - March 2020</i>
           <p>In this job I was in a Frontend Team in constantly communication with the Backend Team. I built products using ReactJS, RXJS and Redux. I had to design and develop styled components for some applications that I started from scratch, also I made some refactor to their previous apps.</p>
-          <h3>Technology and Information Analyst</h3>
+          <h2>Technology and Information Analyst</h2>
           <i>Universidad Católica Andres Bello (UCAB) ∙ November 2018 - September 2019</i>
           <p>In this job I worked for a technology coordination of the university. I made documentation of their previous applications, and made an application from scratch using Angular. Also, I collaborate at backend group with the desing and develop of the database and API using mySQL, typeORM, ExpressJS and nodeJS.</p>
         </SectionBody>

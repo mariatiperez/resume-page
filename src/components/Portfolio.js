@@ -10,11 +10,8 @@ const PortfolioWrapper = styled.section`
   border-bottom: 1px solid #E8E8E8;
   padding: 5% 0;    
   max-width: 1020px;
-  & > h2 {
-    margin: 0 auto auto;
-    /* border-bottom: 3px solid #ce4257; */
-    /* width: 120px; */
-    /* padding: 5px 0; */
+  & > i, h2 {
+    margin: 10px 20px;
   }
 `;
 
@@ -23,11 +20,11 @@ const ProjectsPreview = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  padding: 2% 0;    
+  padding: 20px 0;    
   & > img {
     cursor: pointer;
-    max-height: 70px;
-    max-width: 70px;
+    max-height: 20%;
+    max-width: 20%;
   }
 `;
 
@@ -60,6 +57,8 @@ const Portfolio = () => {
   const [chosenProject, setChosenProject] = useState(0);
   return (
     <PortfolioWrapper id="portfolio">
+      <h2>Check out some things I've done!</h2>
+      <i>Click one of the icons and see the images of that project.</i>
       <ProjectsPreview>
         {projects.map((urls, index) =>
           <img
