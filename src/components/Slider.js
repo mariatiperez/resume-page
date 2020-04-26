@@ -6,6 +6,15 @@ const SlideContainer = styled.div`
   width: 75%;
   max-width: 750px;
   margin: auto;
+
+  & > div > div > div > div > div {
+    display: flex;
+    vertical-align: middle;
+    
+    @media only screen and (max-width: 375px) {
+      max-height: 200px;
+    }
+  }
 `;
 
 const properties = {
@@ -22,22 +31,15 @@ const Slideshow = ({ slideImages }) => {
     <SlideContainer>
       <Slide {...properties}>
         {slideImages.map(url => (
-          <div
+          <img
+            src={url}
+            alt="slide"
             key={"slider/" + url}
             style={{
-              height: "100%",
-              display: "flex",
-              verticalAlign: "middle"
-            }}>
-            <img
-              src={url}
-              alt="slide"
-              key={"slider/" + url}
-              style={{
-                width: "100%",
-                margin: "auto"
-              }} />
-          </div>
+              width: "100%",
+              margin: "auto"
+            }}
+          />
         ))}
       </Slide>
     </SlideContainer>
