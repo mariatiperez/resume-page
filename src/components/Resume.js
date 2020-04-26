@@ -28,6 +28,10 @@ const SectionTitle = styled.div`
   & > img {
     width: 96px;
     margin: 1em auto 0 auto;
+    
+	  @media only screen and (max-width: 700px) {
+      margin: auto;
+    }
   }
 `;
 
@@ -59,7 +63,7 @@ const Resume = () => {
         </SectionTitle>
         <SectionBody>
           <h2>Bachelor in Computer Science Engineering</h2>
-          <i>Universidad Católica Andres Bello (UCAB) - Venezuela ∙ Septiembre 2015 - Octubre 2020</i>
+          <i>Universidad Católica Andres Bello (UCAB) - Venezuela ∙ September 2015 - October 2020</i>
           <p>
             During my studies I had the opportunity to live different points of view,
             which gave me very good experiences. All my life I have been a student of
