@@ -39,8 +39,8 @@ const Portfolio = () => {
     "/resume-page/images/coleados/6.png"
   ], [
     "/resume-page/images/service/0.png",
-    "/resume-page/images/service/1.png",
-    "/resume-page/images/service/2.png",
+    "/resume-page/images/service/1.PNG",
+    "/resume-page/images/service/2.PNG",
     "/resume-page/images/service/3.png"
   ], [
     "/resume-page/images/sgr/0.png",
@@ -50,8 +50,8 @@ const Portfolio = () => {
     "/resume-page/images/sgr/5.png"
     // ], [
     //   "/resume-page/images/library/0.png",
-    //   "/resume-page/images/library/1.png",
-    //   "/resume-page/images/library/2.png"
+    //   "/resume-page/images/library/1.PNG",
+    //   "/resume-page/images/library/2.PNG"
   ]
   ];
   const [chosenProject, setChosenProject] = useState(0);
