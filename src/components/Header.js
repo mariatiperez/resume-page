@@ -5,6 +5,7 @@ import { ReactComponent as LinkedInIcon } from "../icons/linkedin.svg";
 import { ReactComponent as StackOverflowIcon } from "../icons/stack-overflow.svg";
 import { ReactComponent as GitHubIcon } from "../icons/github.svg";
 import { ReactComponent as MenuIcon } from "../icons/menu.svg";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const HeaderWrapper = styled.div`
 	position: relative;
@@ -28,9 +29,6 @@ const NavBar = styled.nav`
 		margin: 0;
 		& > li {
 			display: inline-block;
-				&.current > a {
-					color: #CE4257;
-				}
 			& > a {
 				display: inline-block;
 				padding: 8px 13px;
@@ -38,6 +36,10 @@ const NavBar = styled.nav`
 				text-decoration: none;
 				color: #223843;
 				text-transform: capitalize;
+				cursor: pointer;
+				&.active {
+					color: #CE4257;
+				}
 			}
 		}
 	}
@@ -91,9 +93,11 @@ const About = styled.div`
 	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: center;
-	max-width: 1020px;
-	padding: 50px 0 0;
+	max-width: 1020px; 
+	padding: 6% 0;
+	border-bottom: 1px solid #E8E8E8;
 	margin: auto;
+	width: 95%;
 	& > div {
 		width: 50%;
 	}
@@ -129,7 +133,6 @@ const SocialMedia = styled.div`
 const Header = () => {
 	const ProfilePhoto = "/resume-page/images/profile-photo.jpg";
 	const sections = ["about", "resume", "portfolio"];
-	const [chosenSection, setChosenSection] = useState(-1);
 	const [showMenu, setShowMenu] = useState(window.screen.width > 700 ? true : false);
 
 	useEffect(() =>
@@ -148,13 +151,18 @@ const Header = () => {
 				{showMenu &&
 					<ul id="nav" className="nav">
 						{sections.map((section, index) => (
-							<li key={section}
-								className={chosenSection === index ? "current" : ""}><a
-									href={"#" + section}
-									onClick={() => { setChosenSection(index); setShowMenu(!showMenu); }}
-									className="smoothscroll">
+							<li key={section}>
+								<Link
+									activeClass="active"
+									to={section}
+									spy={true}
+									smooth={true}
+									offset={-70}
+									duration={500}
+									onClick={() => setShowMenu(!showMenu)}
+								>
 									{section}
-								</a>
+								</Link>
 							</li>))}
 					</ul>
 				}
