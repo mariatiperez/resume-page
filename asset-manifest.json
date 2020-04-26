@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/resume-page/static/css/main.5f361e03.chunk.css",
-    "main.js": "/resume-page/static/js/main.bbb4bdda.chunk.js",
-    "main.js.map": "/resume-page/static/js/main.bbb4bdda.chunk.js.map",
-    "runtime-main.js": "/resume-page/static/js/runtime-main.90c42a2e.js",
-    "runtime-main.js.map": "/resume-page/static/js/runtime-main.90c42a2e.js.map",
+    "main.js": "/resume-page/static/js/main.45c509cd.chunk.js",
+    "main.js.map": "/resume-page/static/js/main.45c509cd.chunk.js.map",
+    "runtime-main.js": "/resume-page/static/js/runtime-main.ed03db1e.js",
+    "runtime-main.js.map": "/resume-page/static/js/runtime-main.ed03db1e.js.map",
     "static/css/2.043b003d.chunk.css": "/resume-page/static/css/2.043b003d.chunk.css",
-    "static/js/2.6186e9e1.chunk.js": "/resume-page/static/js/2.6186e9e1.chunk.js",
-    "static/js/2.6186e9e1.chunk.js.map": "/resume-page/static/js/2.6186e9e1.chunk.js.map",
+    "static/js/2.0c56f58b.chunk.js": "/resume-page/static/js/2.0c56f58b.chunk.js",
+    "static/js/2.0c56f58b.chunk.js.map": "/resume-page/static/js/2.0c56f58b.chunk.js.map",
     "index.html": "/resume-page/index.html",
-    "precache-manifest.52d4681bd002e6713164163ddd2b7380.js": "/resume-page/precache-manifest.52d4681bd002e6713164163ddd2b7380.js",
+    "precache-manifest.b59db4fa0a6900eb12f751638fd2d3ac.js": "/resume-page/precache-manifest.b59db4fa0a6900eb12f751638fd2d3ac.js",
     "service-worker.js": "/resume-page/service-worker.js",
     "static/css/2.043b003d.chunk.css.map": "/resume-page/static/css/2.043b003d.chunk.css.map",
     "static/css/main.5f361e03.chunk.css.map": "/resume-page/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.6186e9e1.chunk.js.LICENSE.txt": "/resume-page/static/js/2.6186e9e1.chunk.js.LICENSE.txt",
+    "static/js/2.0c56f58b.chunk.js.LICENSE.txt": "/resume-page/static/js/2.0c56f58b.chunk.js.LICENSE.txt",
     "static/media/github.53da16c5.svg": "/resume-page/static/media/github.53da16c5.svg",
     "static/media/gmail.86cc47b6.svg": "/resume-page/static/media/gmail.86cc47b6.svg",
     "static/media/linkedin.d849bc25.svg": "/resume-page/static/media/linkedin.d849bc25.svg",
@@ -22,10 +22,10 @@
     "static/media/stack-overflow.2e4cc66b.svg": "/resume-page/static/media/stack-overflow.2e4cc66b.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.90c42a2e.js",
+    "static/js/runtime-main.ed03db1e.js",
     "static/css/2.043b003d.chunk.css",
-    "static/js/2.6186e9e1.chunk.js",
+    "static/js/2.0c56f58b.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.bbb4bdda.chunk.js"
+    "static/js/main.45c509cd.chunk.js"
   ]
 }
