@@ -8,7 +8,6 @@ import { ReactComponent as MenuIcon } from "../icons/menu.svg";
 
 const HeaderWrapper = styled.div`
 	position: relative;
-	/* height: 350px; */
 	width: 100%;
 	text-align: center;
 	overflow: hidden;
@@ -49,8 +48,10 @@ const NavBar = styled.nav`
 	@media only screen and (max-width: 700px) {
 		background: transparent;
 		& > button {
-			display: block;
-		position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
 			width: 48px;
 			height: 48px;
       border: none;
@@ -58,8 +59,8 @@ const NavBar = styled.nav`
       right: 30px;
 			background: #223843;
 			& > svg {
-				width: 30px;
-				height: 30px;
+				width: 48px;
+				height: 48px;
 				fill: white;
 			}
 		}
@@ -78,6 +79,10 @@ const NavBar = styled.nav`
 			}
 
 		}
+	}
+	
+	@media only screen and (max-width: 375px) {
+		max-height: 200px;
 	}
 `;
 
@@ -146,7 +151,7 @@ const Header = () => {
 							<li key={section}
 								className={chosenSection === index ? "current" : ""}><a
 									href={"#" + section}
-									onClick={() => setChosenSection(index)}
+									onClick={() => { setChosenSection(index); setShowMenu(!showMenu); }}
 									className="smoothscroll">
 									{section}
 								</a>
