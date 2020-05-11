@@ -62,7 +62,7 @@ const Resume = () => {
           <h1>Education</h1>
         </SectionTitle>
         <SectionBody>
-          <h2>Bachelor in Computer Science Engineering</h2>
+          <h2>Bachelor in Informatic Engineer</h2>
           <i>Universidad Católica Andres Bello (UCAB) - Venezuela ∙ September 2015 - October 2020</i>
           <p>
             During my studies I had the opportunity to live different points of view,
