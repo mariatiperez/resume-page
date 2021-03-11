@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { ReactComponent as GmailIcon } from "../icons/gmail.svg";
-import { ReactComponent as LinkedInIcon } from "../icons/linkedin.svg";
-import { ReactComponent as StackOverflowIcon } from "../icons/stack-overflow.svg";
+// import { ReactComponent as GmailIcon } from "../icons/gmail.svg";
+// import { ReactComponent as LinkedInIcon } from "../icons/linkedin.svg";
+// import { ReactComponent as StackOverflowIcon } from "../icons/stack-overflow.svg";
 // import { ReactComponent as GitHubIcon } from "../icons/github.svg";
 import { ReactComponent as MenuIcon } from "../icons/menu.svg";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
+// import { Link, animateScroll as scroll } from "react-scroll";
 
 const HeaderWrapper = styled.div`
   position: relative;
