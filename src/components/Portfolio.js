@@ -14,10 +14,6 @@ const PortfolioWrapper = styled.section`
   h2 {
     margin: 10px 20px;
   }
-  &.vertical > div > div > div > div > div > div > img {
-    max-height: 650px;
-    width: auto !important;
-  }
 `;
 
 const ProjectsPreview = styled.div`
@@ -30,13 +26,20 @@ const ProjectsPreview = styled.div`
     cursor: pointer;
     max-height: 100px;
     max-width: 100px;
+    padding: 0.25rem;
+    &.active {
+      border-bottom-style: solid;
+      border-color: #ce4257;
+    }
   }
 `;
 
 const Portfolio = () => {
   const projects = [
     {
-      name: "coleados",
+      name: "Coleados",
+      description:
+        "Aplicación web para la administración negocios con delivery, con manejo de inventario, facturas, productos y empresas. Fue desarrollada bajo un estilo material, utilizando Angular en el frontend y Nodejs + Express en el backend bajo una RESTFUL Api.",
       images: [
         "/images/coleados/0.png",
         "/images/coleados/1.png",
@@ -49,7 +52,9 @@ const Portfolio = () => {
       orientation: "horizontal",
     },
     {
-      name: "service",
+      name: "Gestión de Sacramentos",
+      description:
+        "Aplicación de escritorio para llevar el control de los sacramentos realizados en una iglesia, además permite la generación de documentos PDF para certificación de los mismos. Fue desarrollada bajo un estilo material, utilizando Angular + Electron en el frontend y Nodejs + Express en el backend bajo una RESTFUL Api.",
       images: [
         "/images/service/0.png",
         "/images/service/1.png",
@@ -59,7 +64,9 @@ const Portfolio = () => {
       orientation: "horizontal",
     },
     {
-      name: "sgr",
+      name: "SGR",
+      description:
+        "Sistema de gestión y préstamos de recursos audiovisuales, con manejo de horario y disponibilidad. Fue desarrollada bajo un estilo material, utilizando Angular en el frontend y Nodejs + NestJS en el backend bajo una RESTFUL Api.",
       images: [
         "/images/sgr/0.png",
         "/images/sgr/1.png",
@@ -74,7 +81,9 @@ const Portfolio = () => {
       orientation: "horizontal",
     },
     {
-      name: "cfive",
+      name: "Billetera de Criptomonedas",
+      description:
+        "Aplicacion móvil de un monedero que permite el recibo y envio de pagos en distintas criptomonedas. Fue desarrollada utilizando React Native en el frontend y Django en el backend bajo una RESTFUL Api.",
       images: [
         "/images/cfive/0.png",
         "/images/cfive/1.jpg",
@@ -93,7 +102,9 @@ const Portfolio = () => {
       orientation: "vertical",
     },
     {
-      name: "nextline",
+      name: "Nextline",
+      description:
+        "Aplicacion móvil para clientes de un proveedor de internet, en ella pueden contratar servicios, pagar facturas y solicitar servicio técnico a domicilio con geolocalización. También se realizó la aplicación para los técnicos, donde podían consultar sus tickets asignados, chatear con clientes y guardar información sobre una reparación realizada. Fue desarrollada utilizando Flutter en el frontend y Django en el backend bajo una RESTFUL Api.",
       images: [
         "/images/nextline/0.png",
         "/images/nextline/1.jpg",
@@ -108,7 +119,9 @@ const Portfolio = () => {
       orientation: "vertical",
     },
   ];
+
   const [chosenProject, setChosenProject] = useState(0);
+
   return (
     <PortfolioWrapper
       id="portfolio"
@@ -126,10 +139,18 @@ const Portfolio = () => {
             alt="preview"
             key={"preview/" + urls.images[0]}
             onClick={() => setChosenProject(index)}
+            className={chosenProject === index ? "active" : ""}
           />
         ))}
       </ProjectsPreview>
-      <Slideshow slideImages={projects[chosenProject].images.slice(1)} />
+      <h3 style={{ color: "#ce4257" }}>{projects[chosenProject].name}</h3>
+      <p style={{ paddingBottom: "20px" }}>
+        {projects[chosenProject].description}
+      </p>
+      <Slideshow
+        slideImages={projects[chosenProject].images.slice(1)}
+        orientation={projects[chosenProject].orientation}
+      />
     </PortfolioWrapper>
   );
 };

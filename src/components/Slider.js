@@ -10,7 +10,10 @@ const SlideContainer = styled.div`
   & > div > div > div > div > div {
     display: flex;
     vertical-align: middle;
-    
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
     @media only screen and (max-width: 375px) {
       max-height: 200px;
     }
@@ -23,27 +26,34 @@ const properties = {
   infinite: true,
   indicators: true,
   arrows: true,
-  pauseOnHover: true
+  pauseOnHover: true,
 };
 
-const Slideshow = ({ slideImages }) => {
+const Slideshow = ({ slideImages, orientation }) => {
   return (
     <SlideContainer>
       <Slide {...properties}>
-        {slideImages.map(url => (
+        {slideImages.map((url) => (
           <img
             src={url}
             alt="slide"
             key={"slider/" + url}
-            style={{
-              width: "100%",
-              margin: "auto"
-            }}
+            style={
+              orientation === "vertical"
+                ? {
+                    maxHeight: "650px",
+                    width: "auto !important",
+                  }
+                : {
+                    width: "100%",
+                    margin: "auto",
+                  }
+            }
           />
         ))}
       </Slide>
     </SlideContainer>
-  )
-}
+  );
+};
 
 export default Slideshow;
